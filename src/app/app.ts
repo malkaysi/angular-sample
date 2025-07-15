@@ -2,8 +2,12 @@ import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
+  imports: [],
   template: `
-    Welcome to Angular!
+    <h1>Default</h1>
   `,
+  styleUrls: ['./app.css'],
 })
-export class App {}
+export class App {
+  title = 'default';
+}

@@ -1,13 +1,10 @@
-/*!
- * @license
- * Copyright Google LLC All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.dev/license
+/*
+ *  Protractor support is deprecated in Angular.
+ *  Protractor is used in this example for compatibility with Angular documentation tools.
  */
-
-import {bootstrapApplication} from '@angular/platform-browser';
-import {appConfig} from './app/app.config.js';
+import {bootstrapApplication, provideProtractorTestingSupport} from '@angular/platform-browser';
 import {App} from './app/app';
 
-bootstrapApplication(App, appConfig).catch((err) => console.error(err));
+bootstrapApplication(App, {providers: [provideProtractorTestingSupport()]}).catch((err) =>
+  console.error(err),
+);
